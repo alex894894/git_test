@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Books</title>
+    <style>
+        table,th,tr{
+            border: 1px solid black;              
+            padding: 10px;
+            text-align: left;          
+        }
+        table{
+            border-collapse: collapse;
+        }
+    </style>
+</head>
+<body>
+    <table>
+        <tr>
+            <th>T/B</th>
+            <th>Kitabyn ady</th>
+            <th>Awtory</th>
+            <th>Neshir edilen senesi</th>
+            <th>Sahypa sany</th>
+        </tr>
+        {% for i in books %}
+            <tr>
+                <th>{{forloop.counter}}</th>
+                <th>{{i.book_name}}</th>
+                <th>{{i.author}}</th>
+                <th>{{i.published_date}}</th>
+                <th>{{i.page_volume}}</th>
+            </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
