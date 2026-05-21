@@ -9,4 +9,4 @@ jobs:
 
     steps:
       - name: Ping Google
-        run: ping -c 4 google.com
+        run: ping -c 4 8.8.8.8
