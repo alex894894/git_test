@@ -1,12 +1,12 @@
-name: Ping Google
+name: Test Internet
 
 on:
   push:
 
 jobs:
-  ping:
+  test:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Ping Google
-        run: ping -c 4 8.8.8.8
+      - name: Test Google
+        run: curl -I https://google.com
